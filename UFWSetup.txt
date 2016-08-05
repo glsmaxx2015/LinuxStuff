@@ -1,0 +1,22 @@
+
+ **SETUP UFW 9-11-2015**
+
+
+If using UFW here is a simple setup that should be good for most users:
+
+pacman -S ufw
+
+from root term:
+1) systemctl start ufw
+2) ufw default deny
+3) ufw deny ssh (or ufw allow ssh, if you use this feature for logins etc...)
+4) ufw enable
+5) systemctl enable ufw
+6) ufw status (this will show the firewall is active and set to deny all and deny ssh or deny all and allow ssh depending on your set up).
+
+For further reference or tweaking:
+https://wiki.archlinux.org/index.php/Ufw
+
+
+
+https://wiki.archlinux.org/index.php/Uncomplicated_Firewall
